@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- O QUE FAZ: Avisa ao navegador que o documento segue o padrao moderno do HTML5 -->
+<!-- NO TRABALHO: Item basico obrigatorio para passar sem erros no validador W3C -->
+
+<html lang="pt-br">
+<!-- O QUE FAZ: Tag raiz que envolve a pagina inteira e define o idioma oficial como Portugues do Brasil -->
+<!-- NO TRABALHO: Acessibilidade para leitores de tela pronunciarem o texto corretamente -->
+
+<head>
+<!-- O QUE FAZ: Cabecalho tecnico onde ficam as instrucoes invisiveis para quem visita o site -->
+<!-- NO TRABALHO: Estrutura obrigatoria da pagina antes do carregamento do conteudo visivel -->
+
+    <meta charset="UTF-8">
+    <!-- O QUE FAZ: Define a codificacao UTF-8 para que acentos e cedilhas funcionem sem quebrar -->
+    <!-- NO TRABALHO: Requisito de sintaxe para aprovacao no W3C -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O QUE FAZ: Faz a pagina se ajustar a largura da tela do celular sem precisar dar zoom de pinca -->
+    <!-- NO TRABALHO: Obrigatorio para fazer a responsividade do site funcionar no celular -->
+
+    <title>Recanto das Artes | Caneca Personalizada</title>
+    <!-- O QUE FAZ: Titulo que fica escrito na aba superior do navegador -->
+    <!-- NO TRABALHO: Identificacao de cada pagina exigida no cabecalho -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- O QUE FAZ: Conecta este arquivo HTML com a folha de estilos externa estilo.css -->
+    <!-- NO TRABALHO: Cumpre a exigencia da disciplina de usar CSS externo em vez de misturar estilo no HTML -->
+
+</head>
+<!-- O QUE FAZ: Fecha a area tecnica de configuracoes -->
+
+<body>
+<!-- O QUE FAZ: Inicio de tudo o que o visitante realmente enxerga na tela -->
+
+    <!-- CABECALHO COM LOGO E NAVEGACAO -->
+    <header>
+    <!-- O QUE FAZ: Tag semantica estrutural do HTML5 que delimita a faixa superior do topo -->
+    <!-- NO TRABALHO: Uso correto de semantica do HTML5; no CSS selecionamos por: header -->
+
+        <div class="barra-topo">
+        <!-- O QUE FAZ: Caixa organizadora que segura a logo de um lado e o menu do outro -->
+        <!-- NO TRABALHO: No CSS usamos display: flex para colocar a logo na esquerda e os links na direita; seletor: .barra-topo -->
+
+            <div class="logo">
+            <!-- O QUE FAZ: Bloco que envolve a imagem da logomarca da loja -->
+            <!-- NO TRABALHO: Seletor no CSS: .logo -->
+
+                <a href="index.html">
+                <!-- O QUE FAZ: Transforma a imagem da logo em link clicavel para voltar para a tela inicial -->
+                <!-- NO TRABALHO: Link relativo interno; seletor no CSS: a -->
+
+                    <img src="img/01Logo.png" alt="Logotipo Recanto das Artes Produtos Personalizados">
+                    <!-- O QUE FAZ: Exibe a imagem da logo com a descricao em texto no atributo alt -->
+                    <!-- NO TRABALHO: Cumpre o requisito de acessibilidade e aprovacao no W3C; seletor no CSS: .logo img -->
+
+                </a>
+                <!-- O QUE FAZ: Fecha a tag de link da logo -->
+
+            </div>
+            <!-- O QUE FAZ: Fecha a caixa da logo -->
+
+            <nav>
+            <!-- O QUE FAZ: Tag semantica simples que avisa que aqui fica a barra de navegacao da pagina -->
+            <!-- NO TRABALHO: Menu com tag semantica dedicada vista em aula; seletor no CSS: nav -->
+
+                <ul>
+                <!-- O QUE FAZ: Lista nao-ordenada usada como estrutura base para organizar os botoes do menu -->
+                <!-- NO TRABALHO: Atende ao requisito obrigatorio de uso de listas no trabalho; seletor no CSS: ul -->
+
+                    <li><a href="index.html">Início</a></li>
+                    <!-- O QUE FAZ: Item da lista com link apontando de volta para a vitrine principal -->
+                    <!-- NO TRABALHO: Navegacao entre paginas; seletor no CSS: nav > ul > li -->
+
+                    <li><a href="produto-planner.html">Planners</a></li>
+                    <!-- O QUE FAZ: Link direto para a tela de detalhes do primeiro produto -->
+                    <!-- NO TRABALHO: Interligacao entre as paginas de produtos detalhados -->
+
+                    <li><a href="produto-caneca.html">Canecas</a></li>
+                    <!-- O QUE FAZ: Link correspondente a pagina atual da Caneca -->
+                    <!-- NO TRABALHO: Mantem o padrao da barra de navegacao em todas as telas -->
+
+                    <li><a href="carrinho.html">Carrinho (2)</a></li>
+                    <!-- O QUE FAZ: Link que conduz para a tela do carrinho de compras -->
+                    <!-- NO TRABALHO: Cumpre a exigencia da tela de carrinho com itens ficticios -->
+
+                </ul>
+                <!-- O QUE FAZ: Fecha a lista de botoes do menu -->
+
+            </nav>
+            <!-- O QUE FAZ: Fecha a barra de navegacao -->
+
+        </div>
+        <!-- O QUE FAZ: Fecha a barra do topo -->
+
+    </header>
+    <!-- O QUE FAZ: Fecha o cabecalho completo -->
+
+    <!-- CONTEUDO PRINCIPAL DA CANECA -->
+    <main class="container">
+    <!-- O QUE FAZ: Tag semantica para o conteudo unico da pagina; a classe container centraliza a largura no monitor -->
+    <!-- NO TRABALHO: Tag semantica unica por documento HTML; seletores no CSS: main e .container -->
+        
+        <article class="detalhe-produto">
+        <!-- O QUE FAZ: Tag semantica para uma unidade de conteudo independente (a ficha completa do produto) -->
+        <!-- NO TRABALHO: Semantica do HTML5 para ficha de produto; seletor no CSS: .detalhe-produto -->
+
+            <h1>Caneca Personalizada</h1>
+            <!-- O QUE FAZ: Titulo principal de nivel 1 que nomeia o produto desta pagina -->
+            <!-- NO TRABALHO: Hierarquia semantica correta com apenas um h1 no documento; seletor no CSS: h1 -->
+
+            <!-- AS DUAS IMAGENS: CANECA PRINCIPAL E DETALHE DA ALCA VERDE -->
+            <div class="produto-imagens">
+            <!-- O QUE FAZ: Caixa em flexbox que organiza a galeria com as duas fotos do item lado a lado -->
+            <!-- NO TRABALHO: No CSS usa display: flex e flex-wrap para quebrar linha no celular; seletor: .produto-imagens -->
+
+                <img src="img/Caneca.jpg" alt="Caneca de cerâmica personalizada com bombons">
+                <!-- O QUE FAZ: Exibe a imagem frontal da caneca com texto descritivo no atributo alt -->
+                <!-- NO TRABALHO: Imagem com endereco relativo limpo e acessibilidade; seletor no CSS: .produto-imagens img -->
+
+                <img src="img/Caneca-Verde.jpg" alt="Caneca personalizada com alça e interior na cor verde">
+                <!-- O QUE FAZ: Exibe a segunda imagem detalhando o acabamento com alca e interior verde -->
+                <!-- NO TRABALHO: Cumpre o requisito de apresentar fotos de detalhes do produto; no CSS recebe borda de moldura -->
+
+            </div>
+            <!-- O QUE FAZ: Fecha a galeria de fotos -->
+
+            <div class="produto-informacoes">
+            <!-- O QUE FAZ: Bloco que agrupa preco, texto explicativo, especificacoes e botao de compra -->
+            <!-- NO TRABALHO: Seletor no CSS: .produto-informacoes -->
+
+                <p class="preco">R$ 47,90</p>
+                <!-- O QUE FAZ: Exibe o valor do produto com destaque visual em negrito e verde -->
+                <!-- NO TRABALHO: Identificacao clara de valor monetario; seletor no CSS: .preco -->
+                
+                <p>Caneca de cerâmica resinada de alta qualidade com acabamento brilhante. Acompanha bombons selecionados e embalagem pronta para presentear.</p>
+                <!-- O QUE FAZ: Paragrafo com o texto de apresentacao comercial do item -->
+                <!-- NO TRABALHO: Elemento basico de texto em bloco; seletor no CSS: p -->
+
+                <h2>Especificações do Produto</h2>
+                <!-- O QUE FAZ: Subtitulo de nivel 2 que categoriza as caracteristicas tecnicas -->
+                <!-- NO TRABALHO: Respeita a ordem dos titulos subordinados ao h1; seletor no CSS: h2 -->
+
+                <ul>
+                <!-- O QUE FAZ: Lista nao-ordenada que organiza as caracteristicas do item em topicos -->
+                <!-- NO TRABALHO: Requisito obrigatorio de uso de listas para estruturacao de dados; seletor no CSS: ul -->
+
+                    <li>Capacidade: 325 ml</li>
+                    <!-- O QUE FAZ: Item individual da lista de especificacoes -->
+                    <!-- NO TRABALHO: Conteudo inserido estritamente dentro de elemento li; seletor no CSS: li -->
+
+                    <li>Material: Cerâmica resinada para sublimação fotográfica</li>
+                    <!-- O QUE FAZ: Segundo item da lista tecnica -->
+
+                    <li>Acabamento: Opção de alça e interior coloridos (Verde)</li>
+                    <!-- O QUE FAZ: Terceiro item da lista tecnica -->
+
+                    <li>Pode ser levada ao micro-ondas e lava-louças</li>
+                    <!-- O QUE FAZ: Quarto item da lista tecnica -->
+
+                </ul>
+                <!-- O QUE FAZ: Fecha a lista de especificacoes -->
+
+                <p>
+                    <a href="carrinho.html" class="btn">Adicionar ao Carrinho</a>
+                    <!-- O QUE FAZ: Link comum estilizado com a classe btn que usamos na vitrine -->
+                    <!-- NO TRABALHO: Interligacao entre a tela de produto e o carrinho sem formulários que não foram vistos em aula; seletor no CSS: .btn -->
+                </p>
+
+                <p><a href="index.html">&larr; Voltar para a página inicial</a></p>
+                <!-- O QUE FAZ: Link de volta usando a entidade HTML &larr; para desenhar a seta para a esquerda -->
+                <!-- NO TRABALHO: Navegacao entre as paginas internas; seletor no CSS: a -->
+
+            </div>
+            <!-- O QUE FAZ: Fecha o bloco de informacoes -->
+
+        </article>
+        <!-- O QUE FAZ: Fecha a ficha de detalhes do produto -->
+
+    </main>
+    <!-- O QUE FAZ: Fecha o conteudo principal da pagina -->
+
+    <!-- RODAPE -->
+    <footer>
+    <!-- O QUE FAZ: Tag semantica do HTML5 que delimita o rodape final da pagina -->
+    <!-- NO TRABALHO: Agrupa direitos autorais e informacoes institucionais; seletor no CSS: footer -->
+
+        <p>&copy; 2026 Recanto das Artes - Trabalho acadêmico desenvolvido em HTML5 e CSS3.</p>
+        <!-- O QUE FAZ: Linha final utilizando a entidade HTML &copy; para exibir o simbolo de copyright -->
+        <!-- NO TRABALHO: Demonstra o uso pratico de entidades de caracteres especiais no HTML -->
+
+    </footer>
+    <!-- O QUE FAZ: Fecha o rodape -->
+
+</body>
+<!-- O QUE FAZ: Fecha o corpo visivel do site -->
+
+</html>
+<!-- O QUE FAZ: Encerra formalmente o documento HTML -->

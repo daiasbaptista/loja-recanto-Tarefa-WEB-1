@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- O QUE FAZ: Avisa ao navegador que o documento foi escrito seguindo o padrao moderno do HTML5. -->
+<!-- NO TRABALHO: Item basico e obrigatorio para aprovacao no validador oficial do W3C. -->
+
+<html lang="pt-br">
+<!-- O QUE FAZ: Tag raiz que envolve todo o site e define o idioma oficial como portugues do Brasil. -->
+<!-- NO TRABALHO: Requisito de acessibilidade para a pronuncia correta em leitores de tela. -->
+
+<head>
+<!-- O QUE FAZ: Cabecalho tecnico que abriga as configuracoes da pagina que nao aparecem visualmente na tela. -->
+<!-- NO TRABALHO: Estrutura obrigatoria do documento HTML antes do corpo. -->
+
+    <meta charset="UTF-8">
+    <!-- O QUE FAZ: Define o mapa de caracteres UTF-8, garantindo que acentos e cedilhas funcionem sem quebrar. -->
+    <!-- NO TRABALHO: Regra basica para exibicao perfeita da lingua portuguesa. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O QUE FAZ: Faz a pagina se ajustar a largura da tela do celular sem necessidade de dar zoom. -->
+    <!-- NO TRABALHO: Requisito essencial de responsividade mobile, que e o item de maior peso do trabalho. -->
+
+    <title>Recanto das Artes | Carrinho de Compras</title>
+    <!-- O QUE FAZ: Titulo que fica escrito na aba superior do navegador. -->
+    <!-- NO TRABALHO: Identificacao de cada pagina exigida no cabecalho tecnico. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- O QUE FAZ: Faz a ligacao deste arquivo HTML com a folha de estilos unificada estilo.css. -->
+    <!-- NO TRABALHO: Cumpre o requisito de manter uma folha de estilo CSS externa para todo o site. -->
+
+</head>
+<!-- O QUE FAZ: Fecha a area tecnica de configuracoes. -->
+
+<body>
+<!-- O QUE FAZ: Inicio do corpo da pagina, onde fica tudo o que o usuario enxerga na tela. -->
+
+    <!-- CABEÇALHO -->
+    <header>
+    <!-- O QUE FAZ: Tag semantica estrutural do HTML5 que delimita a faixa superior do site. -->
+    <!-- NO TRABALHO: Web Semantica padrao ensinada em aula; no CSS selecionamos por: header. -->
+
+        <div class="barra-topo">
+        <!-- O QUE FAZ: Caixa organizadora que segura a logo na esquerda e o menu na direita. -->
+        <!-- NO TRABALHO: No CSS usamos display: flex nesta classe para alinhar logo e links lado a lado; seletor: .barra-topo. -->
+
+            <div class="logo">
+            <!-- O QUE FAZ: Caixa organizadora para conter a marca visual. -->
+            <!-- NO TRABALHO: Seletor no CSS: .logo. -->
+
+                <a href="index.html">
+                <!-- O QUE FAZ: Torna o logotipo clicavel para recarregar ou voltar para a pagina inicial. -->
+                <!-- NO TRABALHO: Link relativo interno; seletor no CSS: a. -->
+
+                    <img src="img/01Logo.png" alt="Logotipo Recanto das Artes Produtos Personalizados">
+                    <!-- O QUE FAZ: Exibe a imagem da logo e descreve o conteudo no atributo alt caso a imagem falhe. -->
+                    <!-- NO TRABALHO: Obrigatorio para acessibilidade no W3C; seletor no CSS: .logo img. -->
+
+                </a>
+                <!-- O QUE FAZ: Fecha a tag de link da logo. -->
+
+            </div>
+            <!-- O QUE FAZ: Fecha a caixa delimitadora da logo. -->
+
+            <nav>
+            <!-- O QUE FAZ: Tag semantica simples destinada a conter o menu de navegacao. -->
+            <!-- NO TRABALHO: Menu estruturado com a tag semantica padrao ensinada em aula; seletor no CSS: nav. -->
+
+                <ul>
+                <!-- O QUE FAZ: Lista nao-ordenada usada como base para organizar os links do menu. -->
+                <!-- NO TRABALHO: Atende ao requisito obrigatorio de uso de listas no trabalho; seletor no CSS: ul. -->
+
+                    <li><a href="index.html">Início</a></li>
+                    <!-- O QUE FAZ: Item da lista com link de navegacao para a pagina inicial. -->
+                    <!-- NO TRABALHO: Navegacao entre paginas; seletor no CSS: nav > ul > li. -->
+
+                    <li><a href="produto-planner.html">Planners</a></li>
+                    <!-- O QUE FAZ: Link direto para a pagina de detalhes do Planner. -->
+                    <!-- NO TRABALHO: Interligacao direta de produtos. -->
+
+                    <li><a href="produto-caneca.html">Canecas</a></li>
+                    <!-- O QUE FAZ: Link direto para a pagina de detalhes da Caneca. -->
+                    <!-- NO TRABALHO: Interligacao direta do segundo produto. -->
+
+                    <li><a href="carrinho.html">Carrinho (2)</a></li>
+                    <!-- O QUE FAZ: Link correspondente a tela atual do carrinho de compras. -->
+                    <!-- NO TRABALHO: Mantem o padrao da barra de navegacao em todas as telas. -->
+
+                </ul>
+                <!-- O QUE FAZ: Fecha a lista de botoes do menu. -->
+
+            </nav>
+            <!-- O QUE FAZ: Fecha a barra de navegacao. -->
+
+        </div>
+        <!-- O QUE FAZ: Fecha a barra flexivel superior. -->
+
+    </header>
+    <!-- O QUE FAZ: Fecha o cabecalho completo. -->
+
+    <!-- CONTEÚDO PRINCIPAL (CARRINHO) -->
+    <main class="container">
+    <!-- O QUE FAZ: main abriga o conteudo exclusivo desta pagina; a classe container centraliza a largura maxima. -->
+    <!-- NO TRABALHO: Tag semantica unica por documento HTML; seletores no CSS: main e .container. -->
+
+        <h1>Meu Carrinho de Compras</h1>
+        <!-- O QUE FAZ: Titulo principal h1 identificando o objetivo da pagina. -->
+        <!-- NO TRABALHO: Regra hierarquica do W3C de ter apenas um h1 por pagina; seletor no CSS: h1. -->
+
+        <h2 class="titulo-secao">Itens Selecionados</h2>
+        <!-- O QUE FAZ: Subtitulo de nivel 2 com a barrinha decorativa lateral. -->
+        <!-- NO TRABALHO: No CSS recebe border-left solida de 5px; seletor: .titulo-secao. -->
+
+        <!-- TABELA DO CARRINHO DE COMPRAS -->
+        <table class="tabela-carrinho">
+        <!-- O QUE FAZ: Tabela estruturada para exibir os itens ficticios adicionados ao pedido. -->
+        <!-- NO TRABALHO: Cumpre o requisito obrigatorio de Tabelas da disciplina; seletor: .tabela-carrinho. -->
+
+            <thead>
+            <!-- O QUE FAZ: Bloco estrutural que define as colunas do cabecalho da tabela. -->
+            <!-- NO TRABALHO: Estrutura semantica de tabela para boa organizacao e acessibilidade; seletor: thead. -->
+
+                <tr>
+                <!-- O QUE FAZ: Cria a linha do cabecalho da tabela (table row). -->
+                <!-- NO TRABALHO: Seletor no CSS: thead tr. -->
+
+                    <th>Produto</th>
+                    <!-- O QUE FAZ: Celula de cabecalho (th) que exibe o texto em negrito por padrao. -->
+                    <!-- NO TRABALHO: Seletor no CSS: th. -->
+
+                    <th>Qtd</th>
+                    <th>Preço Unitário</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <!-- O QUE FAZ: Fecha o cabecalho da tabela. -->
+
+            <tbody>
+            <!-- O QUE FAZ: Corpo principal da tabela onde ficam os produtos e valores reais da compra. -->
+            <!-- NO TRABALHO: Separacao semantica de dados; seletor no CSS: tbody. -->
+
+                <tr>
+                <!-- O QUE FAZ: Primeira linha com o item do Planner. -->
+                    <td>Planner A5 Exclusivo 2026</td>
+                    <!-- O QUE FAZ: Celula de dado comum da tabela (td). -->
+                    <!-- NO TRABALHO: Seletor no CSS: td. -->
+                    <td>1</td>
+                    <td>R$ 59,90</td>
+                    <td>R$ 59,90</td>
+                </tr>
+
+                <tr>
+                <!-- O QUE FAZ: Segunda linha com o item da Caneca. -->
+                <!-- NO TRABALHO: No CSS a pseudo-classe tbody tr:nth-child(even) aplica o fundo cinza claro zebrado. -->
+                    <td>Caneca Personalizada (Alça Verde)</td>
+                    <td>1</td>
+                    <td>R$ 47,90</td>
+                    <td>R$ 47,90</td>
+                </tr>
+
+            </tbody>
+            <!-- O QUE FAZ: Fecha o corpo da tabela. -->
+
+            <tfoot>
+            <!-- O QUE FAZ: Rodape estrutural da tabela reservado para resumos e somatorios. -->
+            <!-- NO TRABALHO: Elemento semantico de tabela ensinado na aula; seletor: tfoot. -->
+
+                <tr>
+                <!-- O QUE FAZ: Linha final de fechamento financeiro do pedido. -->
+                    <td colspan="3">Total do Pedido:</td>
+                    <!-- O QUE FAZ: O atributo colspan="3" mescla 3 colunas em uma so para alinhar o texto do total. -->
+                    <!-- NO TRABALHO: Recurso classico de tabelas do HTML ensinado em sala de aula. -->
+
+                    <td>R$ 107,80</td>
+                    <!-- O QUE FAZ: Valor monetario somado final em destaque. -->
+                </tr>
+
+            </tfoot>
+            <!-- O QUE FAZ: Fecha o rodape da tabela. -->
+
+        </table>
+        <!-- O QUE FAZ: Fecha a tabela do carrinho. -->
+
+        <!-- AÇÕES DO CARRINHO (FINALIZAR OU CONTINUAR) -->
+        <p>
+            <a href="#" class="btn">Finalizar Pedido</a>
+            <!-- O QUE FAZ: Botao principal de acao que conclui a intencao de compra usando a classe .btn. -->
+            <!-- NO TRABALHO: Link formatado como botao de destaque sem necessidade de scripts; seletor: .btn. -->
+        </p>
+
+        <p style="margin-top: 15px;">
+            <a href="index.html">&larr; Continuar Comprando</a>
+            <!-- O QUE FAZ: Link secundario de retorno com a entidade &larr; desenhando a setinha para a esquerda. -->
+            <!-- NO TRABALHO: Navegacao intuitiva para voltar a vitrine sem quebrar o fluxo do usuario. -->
+        </p>
+
+    </main>
+    <!-- O QUE FAZ: Fecha o conteudo principal. -->
+
+    <!-- RODAPÉ -->
+    <footer>
+    <!-- O QUE FAZ: Tag semantica para delimitar a area de rodape do site. -->
+    <!-- NO TRABALHO: Agrupa direitos autorais e informacoes institucionais; seletor no CSS: footer. -->
+
+        <p>&copy; 2026 Recanto das Artes - Trabalho acadêmico desenvolvido em HTML5 e CSS3.</p>
+        <!-- O QUE FAZ: Texto final com a entidade HTML &copy; para desenhar o simbolo de direitos autorais. -->
+        <!-- NO TRABALHO: Uso correto de entidades no HTML. -->
+
+    </footer>
+    <!-- O QUE FAZ: Fecha o rodape. -->
+
+</body>
+<!-- O QUE FAZ: Fecha

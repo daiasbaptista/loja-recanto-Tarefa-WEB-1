@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!-- O QUE FAZ: Avisa ao navegador que o documento foi escrito seguindo o padrao moderno do HTML5 -->
+<!-- NO TRABALHO: Item basico e obrigatorio para validacao sem erros no validador oficial do W3C -->
+
+<html lang="pt-br">
+<!-- O QUE FAZ: Tag raiz que envolve o site todo e informa que o conteudo esta em portugues do Brasil -->
+<!-- NO TRABALHO: Regra de acessibilidade para que leitores de tela usem a pronuncia correta das palavras -->
+
+<head>
+<!-- O QUE FAZ: Cabecalho tecnico que abriga as configuracoes da pagina que nao aparecem no desenho visual -->
+<!-- NO TRABALHO: Estrutura obrigatoria do documento HTML antes do carregamento do corpo -->
+
+    <meta charset="UTF-8">
+    <!-- O QUE FAZ: Define a codificacao de caracteres UTF-8, garantindo que acentos e cedilhas funcionem sem quebrar -->
+    <!-- NO TRABALHO: Requisito de sintaxe para aprovacao no validador W3C -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O QUE FAZ: Ajusta o tamanho da tela para caber na largura exata do celular sem quebrar o layout -->
+    <!-- NO TRABALHO: Obrigatorio para fazer as regras de responsividade mobile funcionarem -->
+
+    <title>Recanto das Artes | Inicio</title>
+    <!-- O QUE FAZ: Titulo que fica escrito na aba superior do navegador -->
+    <!-- NO TRABALHO: Identificacao de cada pagina exigida no cabecalho tecnico -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- O QUE FAZ: Faz a ligacao deste arquivo HTML com o arquivo externo estilo.css -->
+    <!-- NO TRABALHO: Cumpre o requisito da disciplina de usar CSS externo em vez de estilos misturados no HTML -->
+
+</head>
+<!-- O QUE FAZ: Fecha a area tecnica de configuracoes -->
+
+<body>
+<!-- O QUE FAZ: Inicia o corpo da pagina, onde fica tudo o que o usuario realmente enxerga na tela -->
+
+    <!-- CABECALHO COM LOGO E NAVEGACAO -->
+    <header>
+    <!-- O QUE FAZ: Tag semantica estrutural do HTML5 que delimita o cabecalho superior do site -->
+    <!-- NO TRABALHO: Mostra o uso de Web Semantica em vez de usar divs genericas; no CSS selecionamos por: header -->
+
+        <div class="barra-topo">
+        <!-- O QUE FAZ: Caixa organizadora para segurar a marca de um lado e o menu do outro -->
+        <!-- NO TRABALHO: No CSS usamos display: flex nesta classe para alinhar logo e links em linha; seletor: .barra-topo -->
+
+            <div class="logo">
+            <!-- O QUE FAZ: Bloco delimitador para organizar a imagem do logotipo -->
+            <!-- NO TRABALHO: Seletor no CSS: .logo -->
+
+                <a href="index.html">
+                <!-- O QUE FAZ: Torna o logotipo clicavel para recarregar ou voltar para a pagina inicial -->
+                <!-- NO TRABALHO: Link relativo interno; seletor no CSS: a -->
+
+                    <img src="img/01Logo.png" alt="Logotipo Recanto das Artes Produtos Personalizados">
+                    <!-- O QUE FAZ: Exibe a imagem da logo e descreve o conteudo no atributo alt caso a imagem falhe -->
+                    <!-- NO TRABALHO: Cumpre acessibilidade para pessoas com deficiencia visual e validacao W3C; seletor no CSS: .logo img -->
+
+                </a>
+                <!-- O QUE FAZ: Fecha a tag de link da logo -->
+
+            </div>
+            <!-- O QUE FAZ: Fecha a caixa da logo -->
+
+            <nav>
+            <!-- O QUE FAZ: Tag semantica simples destinada a conter o menu de navegacao -->
+            <!-- NO TRABALHO: Menu estruturado com a tag semantica padrao ensinada em aula; seletor no CSS: nav -->
+
+                <ul>
+                <!-- O QUE FAZ: Lista nao-ordenada usada como base para organizar os links do menu -->
+                <!-- NO TRABALHO: Atende ao requisito obrigatorio de uso de listas no trabalho; seletor no CSS: ul -->
+
+                    <li><a href="index.html">Início</a></li>
+                    <!-- O QUE FAZ: Item da lista com link de navegacao para a pagina inicial -->
+                    <!-- NO TRABALHO: Interligacao entre paginas; seletor no CSS: nav > ul > li -->
+
+                    <li><a href="produto-planner.html">Planners</a></li>
+                    <!-- O QUE FAZ: Link direto para a pagina de detalhes do primeiro produto -->
+                    <!-- NO TRABALHO: Cumpre a exigencia de detalhar pelo menos 2 produtos -->
+
+                    <li><a href="produto-caneca.html">Canecas</a></li>
+                    <!-- O QUE FAZ: Link direto para a pagina de detalhes do segundo produto -->
+                    <!-- NO TRABALHO: Segunda pagina de detalhe interligada no menu -->
+
+                    <li><a href="carrinho.html">Carrinho (2)</a></li>
+                    <!-- O QUE FAZ: Link que conduz para a tela do carrinho de compras -->
+                    <!-- NO TRABALHO: Cumpre a exigencia da tela de carrinho com itens ficticios -->
+
+                </ul>
+                <!-- O QUE FAZ: Fecha a lista de botoes do menu -->
+
+            </nav>
+            <!-- O QUE FAZ: Fecha a barra de navegacao -->
+
+        </div>
+        <!-- O QUE FAZ: Fecha a barra do topo -->
+
+    </header>
+    <!-- O QUE FAZ: Fecha o cabecalho completo -->
+
+    <!-- FAIXA DE APRESENTACAO E BOAS-VINDAS -->
+    <section class="destaque">
+    <!-- O QUE FAZ: Secao semantica para a frase de boas-vindas logo abaixo do topo -->
+    <!-- NO TRABALHO: No CSS recebe o fundo em degradê com linear-gradient e textos centralizados; seletor: .destaque -->
+
+        <h1>Papelaria e Presentes Personalizados</h1>
+        <!-- O QUE FAZ: Titulo de nivel 1, o mais importante e principal de toda a pagina -->
+        <!-- NO TRABALHO: Regra hierarquica do W3C de ter apenas um h1 por pagina; seletor no CSS: h1 ou .destaque h1 -->
+
+        <p>Você imagina, nós criamos com carinho e acabamento exclusivo.</p>
+        <!-- O QUE FAZ: Paragrafo com texto explicativo de apoio -->
+        <!-- NO TRABALHO: Elemento basico de texto em bloco; seletor no CSS: p ou .destaque p -->
+
+    </section>
+    <!-- O QUE FAZ: Fecha a faixa de boas-vindas -->
+
+    <!-- CONTEUDO PRINCIPAL (VITRINE) -->
+    <main class="container">
+    <!-- O QUE FAZ: main abriga o conteudo exclusivo desta pagina; a classe container centraliza a largura no monitor -->
+    <!-- NO TRABALHO: Tag semantica unica por documento HTML; seletores no CSS: main e .container -->
+
+        <h2 class="titulo-secao">Produtos em Destaque</h2>
+        <!-- O QUE FAZ: Subtitulo de nivel 2 que da nome a vitrine de produtos -->
+        <!-- NO TRABALHO: No CSS recebe border-left para criar a barrinha vertical decorativa; seletor: .titulo-secao -->
+
+        <div class="vitrine">
+        <!-- O QUE FAZ: Caixa organizadora onde montamos a grade com as 4 colunas de produtos -->
+        <!-- NO TRABALHO: Cumpre o requisito obrigatorio de CSS Grid com grid-template-columns: repeat(4, 1fr); seletor: .vitrine -->
+
+            <!-- Card 1: Planner A5 -->
+            <article class="card">
+            <!-- O QUE FAZ: Tag semantica para uma unidade de conteudo independente (o cartao de um produto) -->
+            <!-- NO TRABALHO: No CSS recebe position: relative para servir de ancora a etiqueta promocional; seletor: .card -->
+
+                <span class="etiqueta">Planeje sua rotina:</span>
+                <!-- O QUE FAZ: Tag span de texto com classe etiqueta para destacar o recado em cima da foto -->
+                <!-- NO TRABALHO: No CSS usa position: absolute com top e right para colar no canto superior; seletor: .etiqueta -->
+
+                <img src="img/planner.jpg" alt="Planner A5 Coleção 2026 com capa exclusiva">
+                <!-- O QUE FAZ: Exibe a foto do Planner na grade com descricao acessivel no atributo alt -->
+                <!-- NO TRABALHO: Imagem com endereco relativo limpo e acessibilidade; seletor no CSS: .card img -->
+
+                <h3>Planner A5 Exclusivo</h3>
+                <!-- O QUE FAZ: Titulo de nivel 3 com o nome do produto -->
+                <!-- NO TRABALHO: No CSS recebe min-height para manter os nomes alinhados na mesma altura; seletor: .card h3 -->
+
+                <p>100 folhas, capa exclusiva e miolo funcional.</p>
+                <!-- O QUE FAZ: Breve descricao comercial do item -->
+                <!-- NO TRABALHO: No CSS usa flex-grow: 1 para ocupar a folga e empurrar o preco para o rodape alinhado -->
+
+                <div class="preco-antigo">De R$ 69,90</div>
+                <!-- O QUE FAZ: Exibe o preco original riscado da promocao -->
+                <!-- NO TRABALHO: No CSS recebe text-decoration: line-through; seletor: .preco-antigo -->
+
+                <div class="preco">Por R$ 59,90</div>
+                <!-- O QUE FAZ: Exibe o preco de venda real em destaque verde e negrito -->
+                <!-- NO TRABALHO: Identificacao de valor monetario; seletor no CSS: .preco -->
+
+                <a href="produto-planner.html" class="btn">Ver Detalhes</a>
+                <!-- O QUE FAZ: Link estilizado com aparencia de botao que abre a tela completa do produto -->
+                <!-- NO TRABALHO: Interligacao entre a vitrine e a tela de detalhe; seletor no CSS: .btn -->
+
+            </article>
+            <!-- O QUE FAZ: Fecha o card do Planner -->
+
+            <!-- Card 2: Caneca Personalizada -->
+            <article class="card">
+            <!-- O QUE FAZ: Segundo artigo individual de produto na vitrine -->
+                <span class="etiqueta">Pronta Entrega</span>
+                <img src="img/caneca.jpg" alt="Caneca de cerâmica personalizada com bombons">
+                <h3>Caneca Personalizada</h3>
+                <p>325ml com bombons e embalagem presenteável.</p>
+                <div class="preco">R$ 47,90</div>
+                <a href="produto-caneca.html" class="btn">Ver Detalhes</a>
+            </article>
+
+            <!-- Card 3: Toalhas Escolares -->
+            <article class="card">
+            <!-- O QUE FAZ: Terceiro produto da vitrine -->
+                <img src="img/toalha.jpg" alt="Toalhas escolares personalizadas">
+                <h3>Toalhas Escolares</h3>
+                <p>100% algodão com barra estampada personalizada.</p>
+                <div class="preco">R$ 25,00</div>
+                <a href="produto-toalha.html" class="btn">Ver Detalhes</a>
+            </article>
+
+            <!-- Card 4: Camisetas -->
+            <article class="card">
+            <!-- O QUE FAZ: Quarto produto que completa a grade de 4 colunas -->
+                <img src="img/camisetas.jpg" alt="Camisetas personalizadas em tecido 100% poliester">
+                <h3>Camisetas personalizadas</h3>
+                <p>100% Poliester com aplicação da arte personalizada nos tamanhos A4.</p>
+                <div class="preco">R$ 129,00</div>
+                <a href="produto-camiseta.html" class="btn">Ver Detalhes</a>
+            </article>
+
+        </div>
+        <!-- O QUE FAZ: Fecha a vitrine em grid -->
+
+        <!-- SECAO MULTIMIDIA (VIDEO) -->
+        <section class="video-secao">
+        <!-- O QUE FAZ: Secao semantica reservada para exibir conteudos de audio ou video -->
+        <!-- NO TRABALHO: Cumpre o requisito obrigatorio de multimídia (incorporacao do YouTube); seletor: .video-secao -->
+
+            <h2 class="titulo-secao">Nosso Processo de Confecção de Bloquinhos Personalizados</h2>
+            <!-- O QUE FAZ: Titulo secundario explicando o tema do video -->
+
+            <div class="video-container">
+            <!-- O QUE FAZ: Caixa criada no CSS para centralizar e enquadrar o reprodutor na tela -->
+            <!-- NO TRABALHO: Seletor no CSS: .video-container -->
+
+                <iframe src="https://www.youtube.com/embed/IE2u-27JHHk" width="560" height="315"></iframe>
+                <!-- O QUE FAZ: Incorpora o video externo tocavel diretamente do YouTube -->
+                <!-- NO TRABALHO: Tag de multimidia em conformidade com o W3C; seletor no CSS: iframe -->
+
+            </div>
+            <!-- O QUE FAZ: Fecha o contêiner do video -->
+
+        </section>
+        <!-- O QUE FAZ: Fecha a secao de video -->
+
+        <!-- SECAO DE PRAZOS (TABELA) -->
+        <section class="prazos-secao">
+        <!-- O QUE FAZ: Secao semantica que agrupa os prazos de producao e politicas de entrega -->
+        <!-- NO TRABALHO: Seletor no CSS: .prazos-secao -->
+
+            <h2 class="titulo-secao">Prazos de Confecção e Envio</h2>
+            <!-- O QUE FAZ: Titulo de nivel 2 para a tabela de informacoes -->
+
+            <table class="tabela-prazos">
+            <!-- O QUE FAZ: Cria a tabela semantica para exibicao de dados em linhas e colunas -->
+            <!-- NO TRABALHO: Cumpre o requisito obrigatorio de Tabelas limpas, sem estilizacao direta no HTML; seletor: .tabela-prazos -->
+
+                <thead>
+                <!-- O QUE FAZ: Bloco estrutural que define as colunas do cabecalho da tabela -->
+                <!-- NO TRABALHO: Estrutura semantica de tabela exigida para boa organizacao e acessibilidade; seletor: thead -->
+
+                    <tr>
+                    <!-- O QUE FAZ: Cria a linha do cabecalho da tabela (table row) -->
+                    <!-- NO TRABALHO: Seletor no CSS: tr -->
+
+                        <th>Produto</th>
+                        <!-- O QUE FAZ: Celula de cabecalho (th) que exibe o texto em negrito por padrao -->
+                        <!-- NO TRABALHO: Seletor no CSS: th -->
+
+                        <th>Prazo de Confecção</th>
+                        <th>Forma de Entrega</th>
+                    </tr>
+                </thead>
+                <!-- O QUE FAZ: Fecha o cabecalho da tabela -->
+
+                <tbody>
+                <!-- O QUE FAZ: Corpo principal da tabela onde ficam as linhas com as informacoes reais -->
+                <!-- NO TRABALHO: Separacao estrutural de dados; seletor no CSS: tbody -->
+
+                    <tr>
+                    <!-- O QUE FAZ: Primeira linha com os prazos do Planner -->
+                        <td>Planner A5 Exclusivo</td>
+                        <!-- O QUE FAZ: Celula comum de dado da tabela (td) -->
+                        <!-- NO TRABALHO: Seletor no CSS: td -->
+                        <td>3 a 5 dias úteis</td>
+                        <td>Correios ou Retirada</td>
+                    </tr>
+
+                    <tr>
+                    <!-- O QUE FAZ: Segunda linha com os prazos da Caneca -->
+                        <td>Caneca Personalizada</td>
+                        <td>1 a 2 dias úteis</td>
+                        <td>Correios ou Retirada</td>
+                    </tr>
+
+                    <tr>
+                    <!-- O QUE FAZ: Terceira linha com os prazos das Toalhas -->
+                        <td>Toalhas Escolares</td>
+                        <td>2 a 4 dias úteis</td>
+                        <td>Correios ou Retirada</td>
+                    </tr>
+
+                    <tr>
+                    <!-- O QUE FAZ: Quarta linha com os prazos das Camisetas -->
+                        <td>Camisetas Personalizadas</td>
+                        <td>3 a 5 dias úteis</td>
+                        <td>Correios ou Retirada</td>
+                    </tr>
+
+                </tbody>
+                <!-- O QUE FAZ: Fecha o corpo da tabela -->
+
+            </table>
+            <!-- O QUE FAZ: Fecha a tabela -->
+
+        </section>
+        <!-- O QUE FAZ: Fecha a secao de prazos -->
+
+        <!-- SECAO DE ATENDIMENTO E CONTATO (ESTATICA E VISUAL) -->
+        <section class="atendimento-secao">
+        <!-- O QUE FAZ: Secao semantica para exibir a forma de contato com a loja de forma visual -->
+        <!-- NO TRABALHO: Uso de semantica HTML5 sem links externos complexos; seletor no CSS: .atendimento-secao -->
+
+            <h2 class="titulo-secao">Atendimento Personalizado</h2>
+            <!-- O QUE FAZ: Subtitulo de nivel 2 com a barrinha roxa lateral decorativa -->
+            <!-- NO TRABALHO: Hierarquia semantica de nivel 2 com estilizacao padronizada -->
+
+            <p>Deseja uma arte exclusiva para sua empresa ou evento? Entre em contato conosco:</p>
+            <!-- O QUE FAZ: Frase explicativa convidativa para atendimento comercial -->
+            <!-- NO TRABALHO: Paragrafo basico de suporte textual -->
+
+            <div class="cartao-contato">
+            <!-- O QUE FAZ: Caixa estatica que agrupa o icone e o numero de telefone lado a lado -->
+            <!-- NO TRABALHO: Alinhamento simples com Flexbox basico sem links externos; seletor no CSS: .cartao-contato -->
+
+                <img src="img/contato-whats.png" alt="Icone do WhatsApp para contato">
+                <!-- O QUE FAZ: Exibe o icone local com descricao acessivel no atributo alt -->
+                <!-- NO TRABALHO: Imagem local semantica com atributo de acessibilidade obrigatorio -->
+
+                <span>+55 (51) 99856-9785</span>
+                <!-- O QUE FAZ: Texto simples com o numero do telefone por extenso -->
+                <!-- NO TRABALHO: Exibicao textual direta sem links ou scripts externos -->
+
+            </div>
+            <!-- O QUE FAZ: Fecha a caixa de contato -->
+
+        </section>
+        <!-- O QUE FAZ: Fecha a secao de atendimento -->
+
+    </main>
+    <!-- O QUE FAZ: Fecha o conteudo principal da pagina -->
+
+    <!-- RODAPE -->
+    <footer>
+    <!-- O QUE FAZ: Tag semantica do HTML5 que delimita o rodape final da pagina -->
+    <!-- NO TRABALHO: Agrupa direitos autorais e informacoes institucionais; seletor no CSS: footer -->
+
+        <!-- O QUE FAZ: O código &copy; é uma entidade HTML para desenhar o símbolo de copyright (©) sem quebrar o texto -->
+        <!-- NO TRABALHO: Uso de caracteres especiais do HTML5 ensinados na aula de entidades -->
+        <p>&copy; 2026 Recanto das Artes - Trabalho acadêmico desenvolvido em HTML5 e CSS3.</p>
+
+    </footer>
+    <!-- O QUE FAZ: Fecha o rodape -->
+
+</body>
+<!-- O QUE FAZ: Fecha o corpo visivel do site -->
+
+</html>
+<!-- O QUE FAZ: Encerra formalmente o documento HTML -->

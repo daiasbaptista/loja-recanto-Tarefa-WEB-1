@@ -1,0 +1,942 @@
+/* ==========================================================================
+   RECANTO DAS ARTES - FOLHA DE ESTILOS GERAL (estilo.css)
+   Trabalho de Desenvolvimento para Web I - IFRS Canoas - Daiane Santos
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   BLOCO 1: LIMPEZA DE ESPAÇOS E TEXTO GERAL DO SITE
+   -------------------------------------------------------------------------- */
+
+/* O seletor asterisco seleciona todas as tags que existem na página */
+* {
+    /* O QUE FAZ: Zera a margem externa padrão que o navegador coloca sozinho */
+    /* NO TRABALHO: Prática obrigatória de reset CSS para evitar bordas brancas indesejadas */
+    margin: 0;
+
+    /* O QUE FAZ: Zera o espaço interno padrão para começar tudo alinhado do zero */
+    /* NO TRABALHO: Limpeza inicial do modelo de caixa (Box Model) ensinado na aula 3 */
+    padding: 0;
+
+    /* O QUE FAZ: Faz a largura da caixa incluir a borda e o padding para nada estourar a tela */
+    /* NO TRABALHO: Propriedade essencial de Box Model que impede quebras de layout na responsividade */
+    box-sizing: border-box;
+}
+
+/* O seletor body formata o corpo inteiro da página */
+body {
+    /* O QUE FAZ: Define letras limpas e sem perninhas fáceis de ler na tela */
+    /* NO TRABALHO: Aplicação de família tipográfica legível sem serifa via font-family */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* O QUE FAZ: Pinta o texto de cinza grafite escuro para não cansar a vista */
+    /* NO TRABALHO: Definição de contraste acessível conforme diretrizes de usabilidade */
+    color: #333333;
+
+    /* O QUE FAZ: Coloca um fundo quase branco e limpo no site todo */
+    /* NO TRABALHO: Cor de fundo neutra para destacar os cartões brancos e as fotos */
+    background-color: #fcfcfc;
+
+    /* O QUE FAZ: Dá um respiro de 150% entre uma linha e outra para o texto não embolar */
+    /* NO TRABALHO: Controle de entrelinha vertical usando a propriedade line-height */
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 2: LIMITE CENTRAL DA TELA (CONTAINER)
+   -------------------------------------------------------------------------- */
+
+/* A classe .container segura o conteúdo no meio da tela */
+.container {
+    /* O QUE FAZ: Trava a largura máxima em 1100 pixels para não espalhar em telas gigantes */
+    /* NO TRABALHO: Limitação de largura máxima de leitura ensinada nas aulas de layout */
+    max-width: 1100px;
+
+    /* O QUE FAZ: 0 em cima e auto dos lados centraliza o bloco exatamente no meio do monitor */
+    /* NO TRABALHO: Técnica clássica ensinada pelo professor para centralização horizontal em bloco */
+    margin: 0 auto;
+
+    /* O QUE FAZ: Cria 20 pixels de respiro lateral para o texto não encostar no vidro da janela */
+    /* NO TRABALHO: Espaçamento de respiro lateral para não quebrar a legibilidade em telas menores */
+    padding: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 3: CABEÇALHO E MENU DO TOPO (FLEXBOX BÁSICO)
+   -------------------------------------------------------------------------- */
+
+/* A tag header desenha a faixa colorida superior */
+header {
+    /* O QUE FAZ: Cria o fundo em degradê do azul suave para o rosa */
+    /* NO TRABALHO: Aplicação de cor moderna usando a função CSS linear-gradient */
+    background: linear-gradient(to right, #b2c5e0, #e25dd0);
+
+    /* O QUE FAZ: Desenha uma linha amarela grossa na base para fechar o topo */
+    /* NO TRABALHO: Uso de borda decorativa sólida inferior (border-bottom) */
+    border-bottom: 3px solid #ffd166;
+}
+
+/* A classe .barra-topo alinha a logo na esquerda e os botões na direita */
+.barra-topo {
+    /* O QUE FAZ: Deixa a barra na mesma largura máxima do miolo do site */
+    /* NO TRABALHO: Alinhamento da barra superior com o container principal */
+    max-width: 1100px;
+
+    /* O QUE FAZ: Centraliza a barra no meio da tela */
+    /* NO TRABALHO: Centralização de bloco com margens automáticas */
+    margin: 0 auto;
+
+    /* O QUE FAZ: Dá 15 pixels de respiro em cima/embaixo e 20 pixels dos lados */
+    /* NO TRABALHO: Preenchimento interno do cabeçalho */
+    padding: 15px 20px;
+
+    /* O QUE FAZ: Ativa o Flexbox básico para colocar logo e menu lado a lado */
+    /* NO TRABALHO: Cumpre o requisito obrigatório de uso de Flexbox no alinhamento */
+    display: flex;
+
+    /* O QUE FAZ: Separa os dois lados: logo na esquerda e menu na direita */
+    /* NO TRABALHO: Distribuição dos eixos horizontais com justify-content: space-between */
+    justify-content: space-between;
+
+    /* O QUE FAZ: Nivela o menu na altura do meio da logo */
+    /* NO TRABALHO: Alinhamento vertical perfeito de itens com align-items: center */
+    align-items: center;
+}
+
+/* Imagem da logomarca */
+.logo img {
+    /* O QUE FAZ: Altura grande e equilibrada para não empurrar o menu para baixo */
+    /* NO TRABALHO: Dimensionamento de imagem vetorial/bitmap sem distorção */
+    height: 140px;
+
+    /* O QUE FAZ: Mantém a proporção da imagem sem achatar nem esticar */
+    /* NO TRABALHO: Regra clássica de proporção natural de imagem */
+    width: auto;
+
+    /* O QUE FAZ: Tira o espaço invisível que imagens deixam por baixo */
+    /* NO TRABALHO: Conversão de imagem para bloco para eliminar linha residual de texto */
+    display: block;
+}
+
+/* Lista não-ordenada com os links do menu */
+nav > ul {
+    /* O QUE FAZ: Remove as bolinhas pretas padrão da lista */
+    /* NO TRABALHO: Limpeza de marcadores de lista não-ordenada (ul) */
+    list-style-type: none;
+
+    /* O QUE FAZ: Coloca os botões um ao lado do outro na horizontal */
+    /* NO TRABALHO: Transformação da lista vertical em barra horizontal via Flexbox */
+    display: flex;
+
+    /* O QUE FAZ: Espaço de 15 pixels entre cada botão do menu */
+    /* NO TRABALHO: Espaçamento entre itens flexíveis usando a propriedade gap */
+    gap: 15px;
+
+    /* O QUE FAZ: Mantém todos os botões retos na mesma linha */
+    /* NO TRABALHO: Nivelamento vertical dos elementos da lista */
+    align-items: center;
+}
+
+/* Texto de cada link dentro do menu */
+nav > ul > li > a {
+    /* O QUE FAZ: Pinta o texto do botão na cor branca */
+    /* NO TRABALHO: Cor tipográfica com alto contraste sobre o cabeçalho escuro */
+    color: #ffffff;
+
+    /* O QUE FAZ: Tira o risco sublinhado padrão dos links */
+    /* NO TRABALHO: Remoção de sublinhado padrão de links com text-decoration: none */
+    text-decoration: none;
+
+    /* O QUE FAZ: Deixa a letra em negrito para ficar bem visível */
+    /* NO TRABALHO: Destaque de peso visual com font-weight: bold */
+    font-weight: bold;
+
+    /* O QUE FAZ: Define o tamanho da letra do botão */
+    /* NO TRABALHO: Escala tipográfica adequada para botões de navegação */
+    font-size: 15px;
+
+    /* O QUE FAZ: Cria uma almofadinha clicável em volta da palavra */
+    /* NO TRABALHO: Área de toque e clique acessível (Hit Area) com padding */
+    padding: 8px 12px;
+
+    /* O QUE FAZ: Arredonda levemente os 4 cantos do botão */
+    /* NO TRABALHO: Cantos curvos através da propriedade border-radius */
+    border-radius: 4px;
+
+    /* O QUE FAZ: Faz a cor mudar macio e devagar quando passa o mouse */
+    /* NO TRABALHO: Transição suave de estados de interação via transition */
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o cursor do mouse no link do menu */
+nav > ul > li > a:hover {
+    /* O QUE FAZ: Cria um fundinho branco transparente como um vidro */
+    /* NO TRABALHO: Efeito de destaque ao passar o cursor com pseudo-classe :hover */
+    background-color: rgba(255, 255, 255, 0.2);
+
+    /* O QUE FAZ: Muda a letrinha para a cor amarela da paleta */
+    /* NO TRABALHO: Mudança de cor interativa para feedback visual do usuário */
+    color: #ffd166;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 4: FAIXA DE APRESENTAÇÃO E BOAS-VINDAS (DESTAQUE)
+   -------------------------------------------------------------------------- */
+
+/* A classe .destaque formata a faixa logo abaixo do cabeçalho */
+.destaque {
+    /* O QUE FAZ: Fundo clarinho em degradê diagonal */
+    /* NO TRABALHO: Uso de degradê angular para enriquecimento estético da página */
+    background: linear-gradient(135deg, #f8edeb, #fae1dd);
+
+    /* O QUE FAZ: Centraliza todas as frases no meio */
+    /* NO TRABALHO: Alinhamento horizontal de tipografia via text-align: center */
+    text-align: center;
+
+    /* O QUE FAZ: Espaço interno: 40px em cima/embaixo e 20px dos lados */
+    /* NO TRABALHO: Respiro interno com modelo de caixa */
+    padding: 40px 20px;
+
+    /* O QUE FAZ: Linha cinza clara separando a faixa da vitrine */
+    /* NO TRABALHO: Borda divisória de seções para organização visual */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* O título principal h1 dentro do destaque */
+.destaque h1 {
+    /* O QUE FAZ: Letra grande de manchete para o título mais importante */
+    /* NO TRABALHO: Hierarquia tipográfica dominante para o único h1 da página */
+    font-size: 28px;
+
+    /* O QUE FAZ: Cor roxa da identidade da marca */
+    /* NO TRABALHO: Aplicação de cor primária institucional */
+    color: #4a154b;
+
+    /* O QUE FAZ: Empurra a frase de baixo para não ficarem coladas */
+    /* NO TRABALHO: Margem inferior separando títulos e parágrafos */
+    margin-bottom: 10px;
+
+    /* O QUE FAZ: Sombrinha suave atrás da letra para dar relevo */
+    /* NO TRABALHO: Uso de text-shadow para legibilidade e profundidade */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Frase explicativa embaixo do título */
+.destaque p {
+    /* O QUE FAZ: Tamanho confortável da letra para ler a frase */
+    /* NO TRABALHO: Tipografia de suporte legível para texto descritivo */
+    font-size: 16px;
+
+    /* O QUE FAZ: Tom cinza médio para diferenciar do título */
+    /* NO TRABALHO: Diferenciação hierárquica por meio da cor do texto */
+    color: #555555;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 5: TÍTULOS DE SEÇÕES COM A BARRINHA LATERAL
+   -------------------------------------------------------------------------- */
+
+/* A classe .titulo-secao organiza os subtítulos h2 */
+.titulo-secao {
+    /* O QUE FAZ: Tamanho intermediário para os subtítulos das seções */
+    /* NO TRABALHO: Hierarquia de segundo nível (h2) padronizada no site todo */
+    font-size: 22px;
+
+    /* O QUE FAZ: Cor roxa da marca */
+    /* NO TRABALHO: Consistência cromática nos títulos de seção */
+    color: #4a154b;
+
+    /* O QUE FAZ: Margem de 30px no topo, 0 na direita, 20px embaixo e 0 na esquerda */
+    /* NO TRABALHO: Espaçamento rítmico entre seções com a notação simplificada de margin */
+    margin: 30px 0 20px 0;
+
+    /* O QUE FAZ: Desenha a barra vertical sólida roxa de 5 pixels no lado esquerdo */
+    /* NO TRABALHO: Elemento gráfico decorativo usando border-left sólido */
+    border-left: 5px solid #4a154b;
+
+    /* O QUE FAZ: Afasta a primeira letra em 10px para não bater na barrinha roxa */
+    /* NO TRABALHO: Preenchimento à esquerda para não sobrepor texto e borda */
+    padding-left: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 6: VITRINE DE PRODUTOS (CSS GRID)
+   -------------------------------------------------------------------------- */
+
+/* A classe .vitrine organiza a grade com os 4 produtos */
+.vitrine {
+    /* O QUE FAZ: Ativa o CSS Grid para organizar os cartões em colunas retas */
+    /* NO TRABALHO: Cumpre o requisito obrigatório de uso de CSS Grid no trabalho */
+    display: grid;
+
+    /* O QUE FAZ: Cria 4 colunas de larguras rigorosamente iguais usando frações (1fr) */
+    /* NO TRABALHO: Definição de grade com a função repeat e frações proporcionais */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* O QUE FAZ: Deixa 20 pixels de espaço livre entre um produto e outro */
+    /* NO TRABALHO: Espaçamento regular entre colunas e linhas da grade */
+    gap: 20px;
+
+    /* O QUE FAZ: Deixa 40 pixels de espaço sobrando embaixo antes da próxima seção */
+    /* NO TRABALHO: Separação inferior entre a vitrine e a seção seguinte */
+    margin-bottom: 40px;
+}
+
+/* A classe .card formata o quadradinho branco individual de cada produto */
+.card {
+    /* O QUE FAZ: Fundo branco puro para destacar do fundo cinza do site */
+    /* NO TRABALHO: Cor de fundo de cartões de conteúdo */
+    background-color: #ffffff;
+
+    /* O QUE FAZ: Linha cinza clarinha de contorno em volta do cartão */
+    /* NO TRABALHO: Borda fina para delimitação de unidade de conteúdo */
+    border: 1px solid #dddddd;
+
+    /* O QUE FAZ: Arredonda os 4 cantos do cartão em 8 pixels */
+    /* NO TRABALHO: Suavização de cantos com border-radius */
+    border-radius: 8px;
+
+    /* O QUE FAZ: Margem interna para o conteúdo não tocar na borda */
+    /* NO TRABALHO: Padding interno para manter respiro nas bordas do cartão */
+    padding: 15px;
+
+    /* O QUE FAZ: Flexbox interno: organiza foto, nome, preço e botão em coluna */
+    /* NO TRABALHO: Uso de Flexbox aninhado dentro de itens de CSS Grid */
+    display: flex;
+
+    /* O QUE FAZ: Empilha tudo de cima para baixo */
+    /* NO TRABALHO: Orientação vertical de elementos flexíveis */
+    flex-direction: column;
+
+    /* O QUE FAZ: Serve de parede/base fixa para colar a etiqueta de promoção */
+    /* NO TRABALHO: Uso de position: relative como base de coordenada para elementos absolutos */
+    position: relative;
+
+    /* O QUE FAZ: Sombrinha leve no chão do cartão dando sensação de relevo */
+    /* NO TRABALHO: Efeito de profundidade visual com box-shadow suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    /* O QUE FAZ: Faz a caixinha subir de forma suave ao passar o mouse */
+    /* NO TRABALHO: Transição simultânea de movimento e sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o cursor do mouse no cartão do produto */
+.card:hover {
+    /* O QUE FAZ: Aumenta a caixinha em 3% do seu tamanho natural */
+    /* NO TRABALHO: Transformação visual interativa com transform: scale */
+    transform: scale(1.03);
+
+    /* O QUE FAZ: Escurece a sombra simulando que a caixinha flutuou */
+    /* NO TRABALHO: Feedback de elevação visual no estado :hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* A foto dentro do cartão */
+.card img {
+    /* O QUE FAZ: Faz a foto ocupar toda a largura disponível de dentro do cartão */
+    /* NO TRABALHO: Ajuste de imagem fluida à largura total do elemento pai */
+    width: 100%;
+
+    /* O QUE FAZ: Trava a altura em 220 pixels para todas as fotos ficarem na mesma linha */
+    /* NO TRABALHO: Padronização de altura em catálogos de produtos */
+    height: 220px;
+
+    /* O QUE FAZ: Protege a foto para não cortar, esticar nem deformar */
+    /* NO TRABALHO: Enquadramento correto com object-fit: contain */
+    object-fit: contain;
+
+    /* O QUE FAZ: Arredonda levemente os 4 cantinhos da foto */
+    /* NO TRABALHO: Detalhe de acabamento nos cantos das fotos */
+    border-radius: 4px;
+
+    /* O QUE FAZ: Empurra o título do produto para baixo */
+    /* NO TRABALHO: Margem inferior separando imagem de texto */
+    margin-bottom: 12px;
+}
+
+/* O título h3 com o nome do produto */
+.card h3 {
+    /* O QUE FAZ: Define o tamanho da letra do nome do item */
+    /* NO TRABALHO: Hierarquia de títulos subordinada para itens individuais */
+    font-size: 18px;
+
+    /* O QUE FAZ: Cor escura para leitura nítida */
+    /* NO TRABALHO: Tipografia escura de alto contraste */
+    color: #333333;
+
+    /* O QUE FAZ: Espaço abaixo do nome */
+    /* NO TRABALHO: Margem separando o título da descrição */
+    margin-bottom: 8px;
+
+    /* O QUE FAZ: Reserva espaço para até 2 linhas para os cartões continuarem nivelados */
+    /* NO TRABALHO: Uso de altura mínima (min-height) para nivelamento visual de blocos */
+    min-height: 48px;
+}
+
+/* A frase de descrição simples dentro do cartão */
+.card p:not(.preco):not(.preco-antigo) {
+    /* O QUE FAZ: Letra um pouco menor para a frase explicativa */
+    /* NO TRABALHO: Tipografia secundária para textos descritivos */
+    font-size: 13px;
+
+    /* O QUE FAZ: Tom cinza de leitura agradável */
+    /* NO TRABALHO: Cor suavizada para diferenciar descrição de preços */
+    color: #666666;
+
+    /* O QUE FAZ: Espaço abaixo do texto */
+    /* NO TRABALHO: Margem inferior de espaçamento */
+    margin-bottom: 12px;
+
+    /* O QUE FAZ: Estica o texto ocupando o espaço vazio e empurra preço e botão para o rodapé alinhado */
+    /* NO TRABALHO: Propriedade flex-grow para absorver espaço livre e alinhar os rodapés dos cartões */
+    flex-grow: 1;
+}
+
+/* O preço original riscado da promoção */
+.preco-antigo {
+    /* O QUE FAZ: Letra menor para valor antigo */
+    /* NO TRABALHO: Tipografia de valor tachado */
+    font-size: 13px;
+
+    /* O QUE FAZ: Cinza clarinho parecendo apagado */
+    /* NO TRABALHO: Cor apagada indicando valor anterior */
+    color: #999999;
+
+    /* O QUE FAZ: Risca o número ao meio como etiqueta antiga de loja */
+    /* NO TRABALHO: Efeito de texto riscado usando text-decoration: line-through */
+    text-decoration: line-through;
+
+    /* O QUE FAZ: Reserva o espaço mesmo nos produtos que não têm promoção */
+    /* NO TRABALHO: Altura mínima para manter os preços alinhados em todos os cards */
+    min-height: 18px;
+
+    /* O QUE FAZ: Fica em sua própria linha sozinho */
+    /* NO TRABALHO: Comportamento em bloco para isolamento de linha */
+    display: block;
+}
+
+/* O preço real de venda */
+.preco {
+    /* O QUE FAZ: Letra grande para destacar o valor do produto */
+    /* NO TRABALHO: Destaque de escala tipográfica para conversão comercial */
+    font-size: 18px;
+
+    /* O QUE FAZ: Letra gordinha em negrito */
+    /* NO TRABALHO: Negrito forte para chamar a atenção imediata do usuário */
+    font-weight: bold;
+
+    /* O QUE FAZ: Cor verde chamativa indicando valor de compra */
+    /* NO TRABALHO: Psicologia das cores aplicada a compras (tom verde de confirmação) */
+    color: #06d6a0;
+
+    /* O QUE FAZ: Espaço separando o preço do botão */
+    /* NO TRABALHO: Margem inferior separando o preço da ação de compra */
+    margin-bottom: 12px;
+
+    /* O QUE FAZ: Fica em sua própria linha sozinho */
+    /* NO TRABALHO: Exibição em bloco */
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 7: ETIQUETA COLORIDA DE PROMOÇÃO
+   -------------------------------------------------------------------------- */
+
+/* A classe .etiqueta é o selinho colado em cima da foto */
+.etiqueta {
+    /* O QUE FAZ: Solta o elemento para andar livre pelas coordenadas do cartão pai */
+    /* NO TRABALHO: Cumpre a técnica ensinada de posicionamento absoluto relativo ao card */
+    position: absolute;
+
+    /* O QUE FAZ: Cola a etiqueta a 10 pixels de distância do teto do cartão */
+    /* NO TRABALHO: Coordenada vertical do elemento flutuante */
+    top: 10px;
+
+    /* O QUE FAZ: Cola a etiqueta a 10 pixels de distância da margem direita do cartão */
+    /* NO TRABALHO: Coordenada horizontal do elemento flutuante */
+    right: 10px;
+
+    /* O QUE FAZ: Pinta o fundo de vermelho/coral chamativo de atenção */
+    /* NO TRABALHO: Destaque cromático de aviso/oferta */
+    background-color: #ef476f;
+
+    /* O QUE FAZ: Letras brancas para contraste nítido */
+    /* NO TRABALHO: Alto contraste de acessibilidade para texto pequeno */
+    color: #ffffff;
+
+    /* O QUE FAZ: Letra pequena e compacta para não tapar a imagem */
+    /* NO TRABALHO: Escala tipográfica compacta de etiqueta */
+    font-size: 11px;
+
+    /* O QUE FAZ: Letra em negrito */
+    /* NO TRABALHO: Legibilidade aumentada com negrito */
+    font-weight: bold;
+
+    /* O QUE FAZ: Dá o formato de pílula ao redor da palavra */
+    /* NO TRABALHO: Preenchimento interno para formato de selo */
+    padding: 4px 8px;
+
+    /* O QUE FAZ: Arredonda os cantinhos da etiqueta */
+    /* NO TRABALHO: Cantos arredondados */
+    border-radius: 4px;
+
+    /* O QUE FAZ: Garante que a etiqueta fique por cima da foto e não escondida atrás */
+    /* NO TRABALHO: Controle de sobreposição de camadas em eixos tridimensionais com z-index */
+    z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 8: BOTÕES GERAIS DO SITE (.btn)
+   -------------------------------------------------------------------------- */
+
+/* A classe .btn transforma o link em formato de botão */
+.btn {
+    /* O QUE FAZ: Faz o link ocupar a linha inteira */
+    /* NO TRABALHO: Transformação de elemento em linha (inline) para bloco */
+    display: block;
+
+    /* O QUE FAZ: Ocupa 100% da largura de dentro do cartão */
+    /* NO TRABALHO: Largura fluida total */
+    width: 100%;
+
+    /* O QUE FAZ: Escreve a frase bem no meio do botão */
+    /* NO TRABALHO: Centralização de texto em botões */
+    text-align: center;
+
+    /* O QUE FAZ: Fundo roxo combinando com a marca */
+    /* NO TRABALHO: Cor de fundo de ação principal */
+    background-color: #4a154b;
+
+    /* O QUE FAZ: Letra branca */
+    /* NO TRABALHO: Contraste de cor sobre fundo escuro */
+    color: #ffffff;
+
+    /* O QUE FAZ: Tira o risco sublinhado por ser um link */
+    /* NO TRABALHO: Remoção de sublinhado padrão */
+    text-decoration: none;
+
+    /* O QUE FAZ: Letra em negrito */
+    /* NO TRABALHO: Destaque de texto do botão */
+    font-weight: bold;
+
+    /* O QUE FAZ: Altura confortável para o clique do dedo ou mouse */
+    /* NO TRABALHO: Área de clique respeitando diretrizes ergonômicas de interface */
+    padding: 10px 15px;
+
+    /* O QUE FAZ: Cantos curvos no contorno */
+    /* NO TRABALHO: Cantos arredondados de botão */
+    border-radius: 5px;
+
+    /* O QUE FAZ: Tira bordas cinzas padrão */
+    /* NO TRABALHO: Limpeza de bordas automáticas */
+    border: none;
+
+    /* O QUE FAZ: Transforma a seta do mouse na mãozinha de clique */
+    /* NO TRABALHO: Indicação de interatividade ao passar o cursor */
+    cursor: pointer;
+
+    /* O QUE FAZ: Trava o botão sempre na última linha da base do cartão */
+    /* NO TRABALHO: Margem superior automática que cola o item no rodapé via Flexbox */
+    margin-top: auto;
+
+    /* O QUE FAZ: Transição suave de cor ao passar o mouse */
+    /* NO TRABALHO: Animação suave entre estados normais e :hover */
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito ao passar o cursor sobre o botão */
+.btn:hover {
+    /* O QUE FAZ: Clareia o tom roxo avisando que o botão pode ser clicado */
+    /* NO TRABALHO: Feedback visual obrigatório de interação em botões */
+    background-color: #6b1d6d;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 9: VÍDEO DO YOUTUBE
+   -------------------------------------------------------------------------- */
+
+/* Espaço da seção de vídeo */
+.video-secao {
+    /* O QUE FAZ: Margem de 40 pixels sobrando antes da tabela de prazos */
+    /* NO TRABALHO: Separação inferior entre blocos semânticos */
+    margin-bottom: 40px;
+}
+
+/* Caixa que centraliza o reprodutor */
+.video-container {
+    /* O QUE FAZ: Ativa o Flexbox para alinhamento */
+    /* NO TRABALHO: Uso de contêiner flexível para centralização de mídia */
+    display: flex;
+
+    /* O QUE FAZ: Coloca o vídeo no centro exato da tela na horizontal */
+    /* NO TRABALHO: Alinhamento no eixo principal com justify-content: center */
+    justify-content: center;
+
+    /* O QUE FAZ: Nivelamento vertical */
+    /* NO TRABALHO: Alinhamento no eixo cruzado com align-items: center */
+    align-items: center;
+}
+
+/* Moldura do vídeo iframe */
+.video-container iframe {
+    /* O QUE FAZ: Impede que o reprodutor estoure as laterais em celulares */
+    /* NO TRABALHO: Regra de responsividade para elementos incorporados (iframe) */
+    max-width: 100%;
+
+    /* O QUE FAZ: Borda cinza clara sólida de 2 pixels em volta do vídeo */
+    /* NO TRABALHO: Moldura visual para destacar a mídia incorporada */
+    border: 2px solid #e0e0e0;
+
+    /* O QUE FAZ: Cantos curvos combinando com os cartões da vitrine */
+    /* NO TRABALHO: Consistência de bordas curvas no layout */
+    border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 10: TABELAS COM LINHAS EVIDENTES (PRAZOS E CARRINHO)
+   -------------------------------------------------------------------------- */
+
+/* Formatação compartilhada pelas duas tabelas */
+.tabela-prazos,
+.tabela-carrinho {
+    /* O QUE FAZ: A tabela se estica em 100% da largura do miolo */
+    /* NO TRABALHO: Ocupação total da largura do container */
+    width: 100%;
+
+    /* O QUE FAZ: Junta as bordas das células formando uma linha de grade única */
+    /* NO TRABALHO: Propriedade essencial de tabelas que une as bordas em linha contínua */
+    border-collapse: collapse;
+
+    /* O QUE FAZ: Espaço de 10 pixels abaixo do título da seção */
+    /* NO TRABALHO: Margem superior de afastamento */
+    margin-top: 10px;
+
+    /* O QUE FAZ: Espaço de 30 pixels antes da próxima linha do site */
+    /* NO TRABALHO: Margem inferior da tabela */
+    margin-bottom: 30px;
+
+    /* O QUE FAZ: Fundo branco puro para as células */
+    /* NO TRABALHO: Cor de fundo interna da tabela */
+    background-color: #ffffff;
+}
+
+/* As células individuais (th e td) com as linhas da grade evidentes */
+.tabela-prazos th,
+.tabela-prazos td,
+.tabela-carrinho th,
+.tabela-carrinho td {
+    /* O QUE FAZ: Borda cinza nítida desenhada em volta de cada célula */
+    /* NO TRABALHO: Definição obrigatória de bordas para grade de dados evidente */
+    border: 1px solid #b0b0b0;
+
+    /* O QUE FAZ: Espaço interno de 12px para o texto não bater nas grades */
+    /* NO TRABALHO: Preenchimento de células para legibilidade confortável */
+    padding: 12px;
+
+    /* O QUE FAZ: Alinha as palavras à esquerda */
+    /* NO TRABALHO: Alinhamento textual padronizado à esquerda */
+    text-align: left;
+}
+
+/* Cabeçalho superior da tabela */
+.tabela-prazos thead tr,
+.tabela-carrinho thead tr {
+    /* O QUE FAZ: Fundo roxo para destacar os títulos das colunas */
+    /* NO TRABALHO: Destaque de cabeçalho de tabela semântica (thead) */
+    background-color: #4a154b;
+
+    /* O QUE FAZ: Letras brancas para leitura fácil */
+    /* NO TRABALHO: Contraste de texto em células th */
+    color: #ffffff;
+}
+
+/* Efeito zebrado nas linhas pares */
+.tabela-prazos tbody tr:nth-child(even),
+.tabela-carrinho tbody tr:nth-child(even) {
+    /* O QUE FAZ: Pinta as linhas pares de cinza clarinho para guiar a leitura */
+    /* NO TRABALHO: Uso da pseudo-classe estrutural :nth-child(even) para listagem zebrada */
+    background-color: #f2f2f2;
+}
+
+/* Linha final de total da tabela do carrinho */
+.tabela-carrinho tfoot tr {
+    /* O QUE FAZ: Fundo cinza um pouco mais escuro destacando a linha da soma */
+    /* NO TRABALHO: Estilização do rodapé semântico de tabela (tfoot) */
+    background-color: #e0e0e0;
+
+    /* O QUE FAZ: Deixa os números somados em negrito */
+    /* NO TRABALHO: Destaque de resultado final */
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 11: SEÇÃO DE ATENDIMENTO E CARTÃO ESTÁTICO DE CONTATO
+   -------------------------------------------------------------------------- */
+
+/* Espaço da seção de atendimento */
+.atendimento-secao {
+    /* O QUE FAZ: Espaço sobrando antes do rodapé */
+    /* NO TRABALHO: Margem inferior separando o canal de atendimento do rodapé final */
+    margin-bottom: 40px;
+}
+
+/* Frase explicativa antes do cartão */
+.atendimento-secao p {
+    /* O QUE FAZ: Afasta o texto do cartão de contato */
+    /* NO TRABALHO: Espaçamento de parágrafo descritivo */
+    margin-bottom: 15px;
+
+    /* O QUE FAZ: Tom cinza confortável para leitura */
+    /* NO TRABALHO: Cor neutra de leitura */
+    color: #555555;
+}
+
+/* Caixa estática visual de contato */
+.cartao-contato {
+    /* O QUE FAZ: Coloca o ícone e o número lado a lado no mesmo bloco */
+    /* NO TRABALHO: Uso de Flexbox em linha para alinhamento estático sem tags de link */
+    display: inline-flex;
+
+    /* O QUE FAZ: Nivela a altura do texto com o meio do ícone */
+    /* NO TRABALHO: Alinhamento vertical centralizado de itens flexíveis */
+    align-items: center;
+
+    /* O QUE FAZ: Espaço de 10 pixels entre o ícone e o texto */
+    /* NO TRABALHO: Espaço interno entre imagem e texto com gap */
+    gap: 10px;
+
+    /* O QUE FAZ: Fundo verde suave para identificar o tema de atendimento */
+    /* NO TRABALHO: Cor de fundo suave com contraste para texto escuro */
+    background-color: #e8f8f0;
+
+    /* O QUE FAZ: Borda verde fina ao redor do cartão */
+    /* NO TRABALHO: Delimitação de caixa com border sólida de 1 pixel */
+    border: 1px solid #25d366;
+
+    /* O QUE FAZ: Letras em tom verde escuro para leitura nítida */
+    /* NO TRABALHO: Cor do texto com alto contraste */
+    color: #128c7e;
+
+    /* O QUE FAZ: Letra em negrito */
+    /* NO TRABALHO: Destaque visual dos dígitos do telefone */
+    font-weight: bold;
+
+    /* O QUE FAZ: Tamanho de fonte legível para o cartão */
+    /* NO TRABALHO: Escala tipográfica confortável */
+    font-size: 16px;
+
+    /* O QUE FAZ: Espaçamento interno de respiro dentro da caixinha */
+    /* NO TRABALHO: Preenchimento interno do Box Model */
+    padding: 10px 18px;
+
+    /* O QUE FAZ: Arredonda suavemente os 4 cantos do cartão */
+    /* NO TRABALHO: Cantos arredondados com border-radius */
+    border-radius: 6px;
+}
+
+/* O ícone do WhatsApp dentro do cartão */
+.cartao-contato img {
+    /* O QUE FAZ: Fixa a largura do ícone em 24 pixels */
+    /* NO TRABALHO: Dimensionamento de largura de ícone proporcional */
+    width: 24px;
+
+    /* O QUE FAZ: Fixa a altura do ícone em 24 pixels para ser quadrado */
+    /* NO TRABALHO: Dimensionamento de altura igual para manter proporção 1:1 */
+    height: 24px;
+
+    /* O QUE FAZ: Tira espaços residuais na base da imagem */
+    /* NO TRABALHO: Eliminação de espaço em linha de imagens */
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 12: PÁGINAS DE DETALHES COM FOTOS LADO A LADO
+   -------------------------------------------------------------------------- */
+
+/* A ficha inteira do produto */
+.detalhe-produto {
+    /* O QUE FAZ: Fundo branco limpo para a ficha do produto */
+    /* NO TRABALHO: Cor de fundo de artigo semântico autocontido (article) */
+    background-color: #ffffff;
+
+    /* O QUE FAZ: Borda cinza suave de 1 pixel em volta da ficha inteira */
+    /* NO TRABALHO: Delimitação visual da ficha do produto */
+    border: 1px solid #e0e0e0;
+
+    /* O QUE FAZ: Cantos arredondados de 8 pixels */
+    /* NO TRABALHO: Padrão consistente de cantos arredondados */
+    border-radius: 8px;
+
+    /* O QUE FAZ: Espaçamento interno amplo de 25 pixels */
+    /* NO TRABALHO: Preenchimento generoso para página de detalhes */
+    padding: 25px;
+
+    /* O QUE FAZ: Distância da barra do cabeçalho */
+    /* NO TRABALHO: Margem superior separando a ficha da barra do topo */
+    margin-top: 20px;
+}
+
+/* Caixa com as duas fotos do produto */
+.produto-imagens {
+    /* O QUE FAZ: Ativa o Flexbox para colocar a foto 1 e a foto 2 lado a lado na mesma linha */
+    /* NO TRABALHO: Cumpre o requisito de galeria flexível em linha horizontal */
+    display: flex;
+
+    /* O QUE FAZ: Deixa 20 pixels de espaço livre entre uma foto e a outra */
+    /* NO TRABALHO: Espaçamento entre as duas fotos da galeria */
+    gap: 20px;
+
+    /* O QUE FAZ: 20 pixels de espaço livre acima e abaixo da galeria de fotos */
+    /* NO TRABALHO: Margens verticais separando título e especificações */
+    margin: 20px 0;
+
+    /* O QUE FAZ: Permite que uma foto desça para baixo da outra caso a tela seja estreita */
+    /* NO TRABALHO: Quebra flexível de linha com flex-wrap para responsividade */
+    flex-wrap: wrap;
+}
+
+/* As duas fotos dentro da seção de detalhes */
+.produto-imagens img {
+    /* O QUE FAZ: Faz cada foto ocupar exatamente a metade da tela descontando o vão do meio */
+    /* NO TRABALHO: Cálculo preciso de largura de 50% com a função CSS calc() */
+    width: calc(50% - 10px);
+
+    /* O QUE FAZ: Trava a altura em 400 pixels para fotos compridas não ocuparem a tela toda */
+    /* NO TRABALHO: Limitação de altura máxima vertical (max-height) */
+    max-height: 400px;
+
+    /* O QUE FAZ: Mantém a proporção real da foto sem achatar nem cortar */
+    /* NO TRABALHO: Ajuste proporcional sem distorção com object-fit: contain */
+    object-fit: contain;
+
+    /* O QUE FAZ: Moldura cinza nítida em volta da imagem */
+    /* NO TRABALHO: Borda sólida de moldura visual */
+    border: 1px solid #cccccc;
+
+    /* O QUE FAZ: Cantinhos curvos na foto */
+    /* NO TRABALHO: Cantos suavizados da moldura */
+    border-radius: 6px;
+
+    /* O QUE FAZ: Respiro interno branco que atua como moldura de quadro */
+    /* NO TRABALHO: Margem interna simulando acabamento de paspatur */
+    padding: 5px;
+
+    /* O QUE FAZ: Garante o fundo branco da moldura */
+    /* NO TRABALHO: Cor de fundo de imagem */
+    background-color: #ffffff;
+}
+
+/* Lista de características técnicas do produto */
+.produto-informacoes ul {
+    /* O QUE FAZ: Empurra a lista para a direita para caber o recuo das bolinhas */
+    /* NO TRABALHO: Recuo e margem padronizados para listas técnicas em páginas de detalhes */
+    margin: 15px 0 20px 25px;
+}
+
+/* Cada linha da lista técnica */
+.produto-informacoes ul li {
+    /* O QUE FAZ: Deixa 6 pixels de espaço entre uma linha e outra para não embolar */
+    /* NO TRABALHO: Espaçamento vertical entre tópicos da lista de especificações */
+    margin-bottom: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 13: RODAPÉ DO SITE
+   -------------------------------------------------------------------------- */
+
+/* Faixa de encerramento no final da página */
+footer {
+    /* O QUE FAZ: Fundo quase preto para fechar o site com peso visual */
+    /* NO TRABALHO: Cor de fundo escuro contrastante para área institucional final */
+    background-color: #222222;
+
+    /* O QUE FAZ: Letras em tom cinza claro para leitura limpa */
+    /* NO TRABALHO: Contraste suave em rodapé */
+    color: #aaaaaa;
+
+    /* O QUE FAZ: Centraliza os direitos autorais no meio da faixa */
+    /* NO TRABALHO: Alinhamento central de informações de copyright */
+    text-align: center;
+
+    /* O QUE FAZ: Preenchimento interno confortável de 20 pixels */
+    /* NO TRABALHO: Altura e respiro interno do rodapé */
+    padding: 20px;
+
+    /* O QUE FAZ: Afasta o rodapé do conteúdo de cima em 50 pixels */
+    /* NO TRABALHO: Margem superior afastando o footer do miolo do site */
+    margin-top: 50px;
+
+    /* O QUE FAZ: Letra pequena padrão de notas de rodapé */
+    /* NO TRABALHO: Tipografia de menor peso visual para dados legais e créditos */
+    font-size: 13px;
+
+    /* O QUE FAZ: Linha sólida roxa de 3 pixels no topo para arrematar o layout */
+    /* NO TRABALHO: Borda superior decorativa consistente com a paleta da identidade */
+    border-top: 3px solid #4a154b;
+}
+
+/* --------------------------------------------------------------------------
+   BLOCO 14: RESPONSIVIDADE PARA CELULAR (MEDIA QUERY)
+   -------------------------------------------------------------------------- */
+
+/* Esta regra só é ativada quando a tela for de 768 pixels ou menor (telas de celular) */
+@media (max-width: 768px) {
+
+    /* Cabeçalho no celular: empilha a logo em cima do menu */
+    .barra-topo {
+        /* O QUE FAZ: Muda o Flexbox para coluna, empilhando a logo sobre o menu */
+        /* NO TRABALHO: Reorganização do cabeçalho para telas verticais com flex-direction */
+        flex-direction: column;
+
+        /* O QUE FAZ: Deixa 15 pixels de espaço vertical entre a logo e a lista do menu */
+        /* NO TRABALHO: Espaçamento entre os blocos empilhados */
+        gap: 15px;
+
+        /* O QUE FAZ: Centraliza tudo no meio da tela do celular */
+        /* NO TRABALHO: Alinhamento centralizado para leitura em smartphones */
+        text-align: center;
+    }
+
+    /* Links do menu no celular */
+    nav > ul {
+        /* O QUE FAZ: Empilha os botões de navegação um embaixo do outro no celular */
+        /* NO TRABALHO: Menu vertical empilhado para facilitar o toque do dedo */
+        flex-direction: column;
+
+        /* O QUE FAZ: Deixa 10 pixels de espaço entre cada botão empilhado */
+        /* NO TRABALHO: Separação tátil entre opções do menu */
+        gap: 10px;
+    }
+
+    /* Transforma a vitrine de 4 colunas em 1 coluna vertical */
+    .vitrine {
+        /* O QUE FAZ: Cada cartão de produto ocupa a tela inteira para dar leitura no celular */
+        /* NO TRABALHO: Cumpre o item mais pontuado do trabalho: adaptação de 4 colunas para 1fr */
+        grid-template-columns: 1fr;
+    }
+
+    /* Fotos dos detalhes no celular */
+    .produto-imagens img {
+        /* O QUE FAZ: Cancela a metade e faz cada foto ocupar a largura total no celular */
+        /* NO TRABALHO: Adaptação da galeria para exibição em largura completa (100%) em telas estreitas */
+        width: 100%;
+    }
+
+    /* Ajuste de escala para as tabelas no celular */
+    .tabela-prazos,
+    .tabela-carrinho {
+        /* O QUE FAZ: Reduz ligeiramente a fonte para os textos caberem na tela estreita */
+        /* NO TRABALHO: Ajuste de escala tipográfica mobile para não quebrar tabelas */
+        font-size: 13px;
+    }
+
+    /* Células das tabelas em telas compactas */
+    .tabela-prazos th,
+    .tabela-prazos td,
+    .tabela-carrinho th,
+    .tabela-carrinho td {
+        /* O QUE FAZ: Diminui o preenchimento para as colunas não estourarem no celular */
+        /* NO TRABALHO: Redução de padding em células para telas pequenas */
+        padding: 8px;
+    }
+}
